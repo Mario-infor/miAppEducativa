@@ -1,0 +1,26 @@
+<br>
+<div class="container" *ngIf="showCity">
+    <p>Ciudades</p>
+    <ul *ngFor="let city of cities">
+        <li> {{city}} </li>
+    </ul>
+</div>
+
+<div class="container">
+    <button class="btn btn-primary" (click)="showCities()" *ngIf="showCity">Esconder ciudades</button>
+    <button class="btn btn-primary" (click)="showCities()" *ngIf="!showCity">Mostrar ciudades</button>
+</div>
+
+<br>
+
+<div class="container">
+    <h4>NgClass</h4>
+    <br>
+    <div [ngClass]="{'alert-primary': changeCSS, 'alert-warning': !changeCSS}" class="alert" role="alert">
+        Estilo de Alertas Booststrap
+    </div>
+    <div>
+        <button class="btn btn-primary" (click)="changeCSSClass()">Cambio Estilo CSS</button>
+    </div>
+</div>
+
